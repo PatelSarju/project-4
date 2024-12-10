@@ -38,7 +38,8 @@ def factorial(num):
 """
 this is lambda function, which filter out the above value of threshold value, which is input by user 
 """
-filter_values=lambda num,lst:lst>num
+filter=[]
+filter_values=lambda num:[filter.append(i) for i in arr if i>num]
 
 # operation 5
 def sort_data():
@@ -90,13 +91,11 @@ while is_on:
     elif choice==4:
         if arr!=[]:
             num=int(input("\nEnter a threshold value to filter out data above this value:"))
-            filter_data=[]
-            for i in arr:
-                if filter_values(num,i):
-                    filter_data.append(i)
+            filter_values(num)
             print(f"\nFiltered Data (values >= {num})")
-            for i in filter_data:
+            for i in filter:
                 print(f"{i} ",end=" ")
+            
         else:
             print("\nYour array is empty!")
     
