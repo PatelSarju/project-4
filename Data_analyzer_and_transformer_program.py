@@ -8,7 +8,6 @@ def input_data():
     """
         This function will take the element value of array and store it in the array
     """
-    print(input_data.__doc__)
     global arr
     numbers=input("\nEnter data for a 1D array (seprated by spaces):")
     for i in numbers.split(' '):
@@ -20,7 +19,6 @@ def display_data_summary():
     """
         This function will give you data summary of the array like, total elements, maximum and minimum value in the array, sum of all values of the array and average value of the array
     """
-    print(display_data_summary.__doc__)
     if arr!=[]:
         print(f"Data summary:\n- Total elements: {len(arr)}\n- Minimum value: {min(arr)}\n- Maximum value: {max(arr)}\n- Sum of all values: {sum(arr)}\n- Average value: {sum(arr)/len(arr)}")
     else:
@@ -31,7 +29,6 @@ def factorial(num):
     """
         this is recursive function, it will find the factorial of given number in recursive way
     """
-    print(factorial.__doc__)
     if num<=1:
         return 1
     else:
@@ -42,14 +39,12 @@ def factorial(num):
 this is lambda function, which filter out the above value of threshold value, which is input by user 
 """
 filter_values=lambda num,lst:lst>num
-print(filter_values.__doc__)
 
 # operation 5
 def sort_data():
     """
         this function will sort the array in ascending or descending order using built-in global function sorted() 
     """
-    print(sort_data.__doc__)
     if arr!=[]:
         order=int(input("\nChoose sorting option:\n1. Ascending\n2. Descending\nEnter the your choice:"))
         if order==1:
@@ -72,7 +67,6 @@ def show_statistics():
     """
         this function will return the summary of the array including maximum and minimum value, sum of all values, average value of the array
     """
-    print(show_statistics.__doc__)
     if arr!=[]:
         return ["\nDataset statistics:\n",f"-Minimum value:{min(arr)}",f"-Maximum value:{max(arr)}\n-Sum of all values: {sum(arr)}\n-Average value:{sum(arr)/len(arr)}"]
     else:
